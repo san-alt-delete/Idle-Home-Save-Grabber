@@ -11,7 +11,7 @@ foreach ($Log in $Logs) {
     $(Get-Content $Log -Tail 100000 | Select-String -Pattern "] Saved 2" -Encoding unicode -CaseSensitive | Select-Object -Last 1) `
     -replace "(?m)^.{81}" | Out-String | Set-Variable Save
 
-    if ($Save -ne $null) {
+    if ($Save -like "v*") {
         Set-Clipboard $Save
         Write-Host "Last save has been copied to clipboard! You can now paste it inside the game."
 
