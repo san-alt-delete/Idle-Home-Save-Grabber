@@ -9,7 +9,7 @@ This is great! But not everyone wants to manually dig through their computer fil
 ## How to use
 Grab the executable file release from [here](https://github.com/san-alt-delete/Idle-Home-Save-Grabber/releases/download/beta/Idle.Home.Save.Grabber.exe). Save it somewhere you can quickly access. 
 
-Simply run the executable. If it found a save code, it should return something like this:
+Simply run the executable. If you get a security warning, you can click **more information** and then **Run anyway**. If it found a save code, it should return something like this:
 ![Screenshot](https://github.com/san-alt-delete/Idle-Home-Save-Grabber/raw/main/Screenshot.png)
 
 You can now paste the save code in the game!
