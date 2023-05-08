@@ -12,7 +12,7 @@ $Logs = Get-ChildItem ~\AppData\LocalLow\VRChat\VRChat\output_log_*.txt | Sort-O
 # For each log in the folder...
 foreach ($Log in $Logs) {
 	# ...get the log file. Check for patterns maching the save code from Idle Home, exclude everything before the actual save code and put that into a variable as a string.
-    $(Get-Content $Log | Select-String -Pattern "] Saved 2" -Encoding unicode -CaseSensitive | Select-Object -Last 1) `
+    $((Get-Content -ReadCount 0 $Log) | Select-String -Pattern "] Saved 2" -Encoding unicode -CaseSensitive | Select-Object -Last 1) `
     -replace "(?m)^.{81}" | Out-String | Set-Variable Save
 	
 	# If the variable contains a string starting with "v", such as it would if the script found a save code...
